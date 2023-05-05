@@ -26,6 +26,13 @@ Instructions:
 
 IMPORTANT: After switching to Klipper and before the first print, make sure you properly determine the z offset. The value in printer.cfg was set for my particular machine and won't necessarilly be correct for yours. You can follow these instructions: https://docs.vorondesign.com/community/howto/120decibell/z_endstop_configuration.html.
 
+Gcode start and end should be added to the slicer profile in your machine settings:
+
+print start code:
+PRINT_START EXTRUDER_TEMP=[first_layer_temperature] BED_TEMP=[first_layer_bed_temperature] AREA_START={first_layer_print_min[0]},{first_layer_print_min[1]} AREA_END={first_layer_print_max[0]},{first_layer_print_max[1]}
+
+Print end code:
+PRINT_END
 
 Input Shaping Instructions:
 
